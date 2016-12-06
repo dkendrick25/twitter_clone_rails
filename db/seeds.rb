@@ -8,7 +8,7 @@
 
 
 User.create!(name: 'Example User',
-             email: 'example@railsturtoial.org',
+             email: 'example@railstutorial.org',
              password: 'foobar',
              password_confirmation: 'foobar',
              admin: true)
@@ -21,4 +21,10 @@ User.create!(name: 'Example User',
                email: email,
                password: password,
                password_confirmation: password)
+end
+#takes the first 6 users from the db and creates fake microposts
+users = User.order(:created_at).take(6)
+50.times do
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.microposts.create!(content: content) }
 end

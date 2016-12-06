@@ -5,6 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 #bcrypt for password protection
 gem 'bcrypt', '3.1.11'
+#gems for image uploading and resizing
+gem 'carrierwave',             '0.11.2'
+gem 'mini_magick',             '4.5.1'
+gem 'fog',                     '1.38.0'
 #faker of fake user
 gem 'faker', '1.6.6'
 #pagination
